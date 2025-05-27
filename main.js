@@ -7,14 +7,14 @@ const typed = new Typed('#typed', {
     loop: true
 });
 
-fetch('content/about_me.txt')
+fetch('./content/about_me.txt')
     .then(response => response.text())
     .then(data => {
       document.getElementById('about-me').innerText = data;
     })
     .catch(error => console.error('Error loading the text file:', error));
 
-fetch('content/experiences.json')
+fetch('./content/experiences.json')
     .then(response => response.json())
     .then(data => {
         const experiencesGrid = document.getElementById('experiences-grid');
