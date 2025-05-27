@@ -1,0 +1,43 @@
+{
+    "0": {
+        "company": "Client Project for Group Buying Platform",
+        "title": "Full-Stack Developer",
+        "location": "Taipei, Taiwan",
+        "time": "Feb 2024-Jul 2024",
+        "description": [
+            "Developed a Python-based Line chatbot for message-based ordering. Shorten the order process by 70%.",
+            "Built a React-based admin dashboard that reduces 70% of the time spent on logistics workflows and manual coordination.",
+            "Utilized Docker and SQL to containerize and integrate program components, ensuring smooth deployment and scalability.",
+            "Supervised two students through client interviews and system specification stages."
+        ]
+    },
+    "1": {
+        "company": "Billion Pixels Optics Co.",
+        "title": "R&D Intern",
+        "location": "Taipei, Taiwan",
+        "time": "Jun 2023-Jul 2023",
+        "description": [
+            "Developed and tested laptop camera modules with Human Presence Detection, fine-tuning the lens focus of test samples to gather more reference data, laying a foundation for improvements in the next testing phase.",
+            "Presented products to major clients such as ASUS, supporting partnership discussions and enhancing client interest."
+        ]
+    },
+    "2": {
+        "company": "R.O.C. Army",
+        "title": "Private (Rank)",
+        "location": "Chiayi, Taiwan",
+        "time": "Summer 2023/Summer 2024",
+        "description": [
+            "Completed mandatory military service during summers, allowing for uninterrupted career development and future planning."
+        ]
+    },
+    "3": {
+        "company": "UC Irvine - Student Success Initiatives",
+        "title": "International Student Excellence Programs Peer Mentor",
+        "location": "Irvine, CA",
+        "time": "Sep 2023-Jun 2024",
+        "description": [
+            "Guided international students in utilizing campus resources, helping them achieve personal and academic milestones.",
+            "Organized social and academic events, held weekly check-ins, and represented ISEP at outreach and intercultural activities."
+        ]
+    }
+}

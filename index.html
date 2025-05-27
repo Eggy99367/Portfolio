@@ -28,25 +28,35 @@
                 <a href="#" class="logo">VC</a>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
+                    <li><a href="#experiences">Experiences</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-
+    
     <main>
         <section id="hero" class="hero-section">
             <div class="container">
                 <h1>Hello, I'm Vincent Chen</h1>
-                <p class="lead">Software Developer & Problem Solver</p>
+                <p class="lead">I'm a <span id="typed"></span></p>
             </div>
         </section>
+
+        <div id="tsparticles"></div>
 
         <section id="about" class="section">
             <div class="container">
                 <h2>About Me</h2>
-                <p>Welcome to my portfolio! I'm passionate about creating efficient and elegant solutions to complex problems.</p>
+                <p id="about-me"></p>
+            </div>
+        </section>
+
+        <section id="experiences" class="section">
+            <div class="container">
+                <h2>Experiences</h2>
+                <div class="experiences-grid" id="experiences-grid"></div>
             </div>
         </section>
 
@@ -72,7 +82,7 @@
                 <div class="contact-links">
                     <a href="https://github.com/Eggy99367" target="_blank" rel="noopener noreferrer">GitHub</a>
                     <a href="https://linkedin.com/in/yhchen0109" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="mailto:your.email@example.com">Email</a>
+                    <a href="yhchen.tw0109@gmail.com">Email</a>
                 </div>
             </div>
         </section>
@@ -84,6 +94,10 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-all@2.12.0/tsparticles.all.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tsparticles/plugin-polygon-mask@2.12.0/tsparticles.plugin.polygon-mask.min.js"></script> -->
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="main.js" defer></script>
 </body>
 </html>
