@@ -33,6 +33,25 @@ fetch('./content/experiences.json')
     })
     .catch(error => console.error('Error loading the JSON file:', error));
 
+fetch('./content/projects.json')
+    .then(response => response.json())
+    .then(data => {
+        const projectsGrid = document.getElementById('projects-grid');
+        for (const project of Object.values(data)) {
+            const projectCard = document.createElement('div');
+            projectCard.className = 'project-card';
+            projectCard.innerHTML = `
+                <h3>${project.projectName}</h3>
+                ${project.description.map(bulletpoint => `<p>• ${bulletpoint}</p>`).join('')}
+                <div class="project-links">
+                    ${Object.entries(project.links).map(([linkTitle, linkUrl]) => `<a href="${linkUrl}" class="button">${linkTitle}</a>`).join('')}
+                </div>
+                `
+            projectsGrid.appendChild(projectCard);
+        }
+    })
+    .catch(error => console.error('Error loading the JSON file:', error));
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

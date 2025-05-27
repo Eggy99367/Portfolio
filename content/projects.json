@@ -1,0 +1,36 @@
+{
+    "0": {
+        "projectName": "Minesweeper Game Playing AI",
+        "description": [
+            "Built an AI with strategies like Backtracking, MRV, and LCV. Having a win rate of 83% for large (64x64) maps."
+        ],
+        "links": {
+        }
+    },
+    "1": {
+        "projectName": "VenusHack Hackathon",
+        "description": [
+            "Built a React-based website that displays student reviews for the current meals provided by UCI dining halls, and suggests the current best dining option based on meals' overall rating to help students make informed dining choices on every meal."
+        ],
+        "links": {
+        }
+    },
+    "2": {
+        "projectName": "QR Sign-In",
+        "description": [
+            "QR Sign-In is a QR-based attendance system integrated with Google Sheets via Google Apps Script, enabling automated email ticket distribution and a streamlined QR check-in platform for event managers, reducing check-in time by 70%."
+        ],
+        "links": {
+            "View Project": "https://script.google.com/macros/s/AKfycbxdPi2gPxWhGfz___RbdLl56SlmnK_ALOs8ZdqAlNRekIF6V9zttYWxp2PzTVkWO8hB0A/exec"
+        }
+    },
+    "3": {
+        "projectName": "WebReg Hackathon",
+        "description": [
+            "Designed an improved UI for WebReg, UCI’s course registration tool, using Sigma, incorporating features like course simulation/suggestion, friend schedule viewing, and a \"stress button\" to enhance the course selection experience for students."
+        ],
+        "links": {
+            "View Project": "https://script.google.com/macros/s/AKfycbxdPi2gPxWhGfz___RbdLl56SlmnK_ALOs8ZdqAlNRekIF6V9zttYWxp2PzTVkWO8hB0A/exec"
+        }
+    }
+}
