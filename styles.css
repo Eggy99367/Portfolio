@@ -171,7 +171,7 @@ nav {
 /* Projects Grid */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -228,6 +228,32 @@ nav {
 .contact-links a:hover {
     color: var(--secondary-color);
 }
+
+/* Form */
+form {
+    max-width: 500px;
+    margin: auto;
+    font-family: sans-serif;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
 
 /* Footer */
 footer {
