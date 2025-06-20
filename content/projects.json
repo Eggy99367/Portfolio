@@ -21,7 +21,8 @@
             "QR Sign-In is a QR-based attendance system integrated with Google Sheets via Google Apps Script, enabling automated email ticket distribution and a streamlined QR check-in platform for event managers, reducing check-in time by 70%."
         ],
         "links": {
-            "View Project": "https://script.google.com/macros/s/AKfycbxdPi2gPxWhGfz___RbdLl56SlmnK_ALOs8ZdqAlNRekIF6V9zttYWxp2PzTVkWO8hB0A/exec"
+            "View Project": "https://qr-check-in.yhchen.com",
+            "Demo Video": "https://youtu.be/EsMbCuWoQP0?si=Ogm20OBGzwgPfYjE"
         }
     },
     "3": {
