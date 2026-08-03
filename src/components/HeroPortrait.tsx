@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function HeroPortrait() {
   return (
     <div
-      className="relative flex aspect-[3/4] w-full items-end justify-center overflow-hidden rounded-t-[999px]"
+      className="relative flex w-full items-end justify-center overflow-hidden rounded-t-[999px]"
       // style={{
       //   background: "linear-gradient(180deg, #2A2E33 0%, #0C0C0C 85%)",
       // }}
