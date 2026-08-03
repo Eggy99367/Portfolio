@@ -43,7 +43,7 @@ export default function HeroSection() {
           a full-stack engineer driven by building intelligent, data-driven products
         </FadeIn>
 
-        <FadeIn delay={0.5} y={20} id="contact">
+        <FadeIn delay={0.5} y={20}>
           <ContactButton />
         </FadeIn>
       </div>

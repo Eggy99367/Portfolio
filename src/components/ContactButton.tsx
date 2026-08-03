@@ -1,11 +1,12 @@
 type ContactButtonProps = {
   className?: string;
+  href?: string;
 };
 
-export default function ContactButton({ className }: ContactButtonProps) {
+export default function ContactButton({ className, href = "#contact" }: ContactButtonProps) {
   return (
     <a
-      href="mailto:yhchen.tw0109@gmail.com"
+      href={href}
       className={`inline-flex items-center justify-center rounded-full px-8 py-3 text-xs font-medium uppercase tracking-widest text-white outline outline-2 outline-offset-[-3px] outline-white transition-transform duration-200 hover:scale-[1.03] sm:px-10 sm:py-3.5 sm:text-sm md:px-12 md:py-4 md:text-base ${className ?? ""}`}
       style={{
         background:
