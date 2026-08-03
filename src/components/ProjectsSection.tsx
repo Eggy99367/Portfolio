@@ -6,11 +6,11 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="relative z-10 -mt-10 rounded-t-[40px] bg-[#0C0C0C] px-5 pb-20 pt-16 sm:-mt-12 sm:rounded-t-[50px] sm:px-8 md:-mt-14 md:rounded-t-[60px] md:px-10"
+      className="relative z-10 -mt-10 rounded-t-[40px] bg-white px-5 pb-20 pt-16 sm:-mt-12 sm:rounded-t-[50px] sm:px-8 md:-mt-14 md:rounded-t-[60px] md:px-10"
     >
       <FadeIn
         as="h2"
-        className="hero-heading text-center font-black uppercase leading-none tracking-tight"
+        className="text-center font-black uppercase leading-none tracking-tight text-[#0C0C0C]"
         style={{ fontSize: "clamp(3rem, 12vw, 160px)" }}
       >
         Project
