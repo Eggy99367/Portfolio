@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef, type CSSProperties } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { type CSSProperties } from "react";
+import { motion, useTransform, type MotionValue } from "framer-motion";
 import PlaceholderImage from "./PlaceholderImage";
 import type { Experience } from "@/data/experience";
 
@@ -9,26 +9,28 @@ type ExperienceCardProps = {
   experience: Experience;
   index: number;
   total: number;
+  progress: MotionValue<number>;
 };
 
-export default function ExperienceCard({ experience, index, total }: ExperienceCardProps) {
-  const cardRef = useRef<HTMLDivElement>(null);
-  const targetScale = 1 - (total - 1 - index) * 0.03;
+const STACK_SCALE_STEP = 0.03;
+const SHRINK_WINDOW_EPSILON = 0.0001;
 
-  const { scrollYProgress } = useScroll({
-    target: cardRef,
-    offset: ["start end", "start start"],
-  });
-  const scale = useTransform(scrollYProgress, [0, 1], [1, targetScale]);
+export default function ExperienceCard({ experience, index, total, progress }: ExperienceCardProps) {
+  const stackDepth = total - 1 - index;
+  const targetScale = 1 - stackDepth * STACK_SCALE_STEP;
+
+  const slot = 1 / total;
+  const shrinkStart = Math.min((index + 1) * slot, 1 - SHRINK_WINDOW_EPSILON);
+  const shrinkEnd = Math.max(shrinkStart + SHRINK_WINDOW_EPSILON, 1);
+  const scale = useTransform(progress, [shrinkStart, shrinkEnd], [1, targetScale]);
 
   return (
     <div
-      className="sticky top-[calc(6rem+var(--stack-offset))] h-[85vh] md:top-[calc(8rem+var(--stack-offset))]"
+      className="sticky top-[calc(var(--stack-offset))] h-[85vh] md:top-[calc(2rem+var(--stack-offset))]"
       style={{ "--stack-offset": `${index * 28}px` } as CSSProperties}
     >
       <motion.div
-        ref={cardRef}
-        style={{ scale }}
+        style={{ scale, transformOrigin: "top center" }}
         className="relative flex h-full flex-col gap-4 rounded-[40px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 sm:gap-6 sm:rounded-[50px] sm:p-6 md:gap-8 md:rounded-[60px] md:p-8"
       >
         <div className="flex items-start gap-4 sm:gap-6 md:gap-8">

@@ -1,8 +1,18 @@
+"use client";
+
+import { useRef } from "react";
+import { useScroll } from "framer-motion";
 import FadeIn from "./FadeIn";
 import ProjectCard from "./ProjectCard";
 import { projects } from "@/data/projects";
 
 export default function ProjectsSection() {
+  const listRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: listRef,
+    offset: ["start start", "end end"],
+  });
+
   return (
     <section
       id="projects"
@@ -16,9 +26,15 @@ export default function ProjectsSection() {
         Project
       </FadeIn>
 
-      <div className="mx-auto mt-8 max-w-6xl">
+      <div ref={listRef} className="mx-auto mt-4 max-w-6xl">
         {projects.map((project, i) => (
-          <ProjectCard key={project.number} project={project} index={i} total={projects.length} />
+          <ProjectCard
+            key={project.number}
+            project={project}
+            index={i}
+            total={projects.length}
+            progress={scrollYProgress}
+          />
         ))}
       </div>
     </section>

@@ -1,8 +1,18 @@
+"use client";
+
+import { useRef } from "react";
+import { useScroll } from "framer-motion";
 import FadeIn from "./FadeIn";
 import ExperienceCard from "./ExperienceCard";
 import { experience } from "@/data/experience";
 
 export default function ExperienceSection() {
+  const listRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: listRef,
+    offset: ["start start", "end end"],
+  });
+
   return (
     <section
       id="experience"
@@ -16,9 +26,15 @@ export default function ExperienceSection() {
         Experience
       </FadeIn>
 
-      <div className="mx-auto mt-8 max-w-6xl">
+      <div ref={listRef} className="mx-auto mt-4 max-w-6xl">
         {experience.map((item, i) => (
-          <ExperienceCard key={item.number} experience={item} index={i} total={experience.length} />
+          <ExperienceCard
+            key={item.number}
+            experience={item}
+            index={i}
+            total={experience.length}
+            progress={scrollYProgress}
+          />
         ))}
       </div>
     </section>
